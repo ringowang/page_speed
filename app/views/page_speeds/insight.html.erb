@@ -18,7 +18,7 @@
       </thead>
       <tbody>
         <% @result['formattedResults']['ruleResults'].each do |k,v| %>
-          <% if v['ruleImpact'] != 0 %>
+          <% if v['ruleImpact'] != 0 && v['summary'] %>
             <tr>
               <td><%= v['localizedRuleName'] %></td>
               <td><%= trans_link v['summary'] %></td>
@@ -33,7 +33,7 @@
       </thead>
       <tbody>
         <% @result['formattedResults']['ruleResults'].each do |k,v| %>
-          <% if v['ruleImpact'] == 0 %>
+          <% if v['ruleImpact'] == 0 && v['summary'] %>
             <tr>
               <td><%= v['localizedRuleName'] %></td>
               <td><%= trans_link v['summary'] %></td>
