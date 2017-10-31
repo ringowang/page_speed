@@ -1,0 +1,4 @@
+<%= form_tag insight_page_speeds_path, method: :get, :class => "form-inline" do %>
+  <%= text_field_tag :url, nil, placeholder: '请输入网页网址', class: 'form-control', size: 100 %>
+  <%= submit_tag '分析', class: 'btn btn-info' %>
+<% end %>
