@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'histories/index'
+
   resources :page_speeds, only: :new do
     collection do
       get :insight
